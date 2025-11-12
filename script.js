@@ -34,11 +34,12 @@ function showCountdown(id) {
     if (id === 'live') {
         bgVideo.querySelector('source').src = "image/background.mp4";
     } else if (id === 'drip') {
-        bgVideo.querySelector('source').src = "image/background2.mp4";
+        bgVideo.querySelector('source').src = "image/background.mp4";
     }
 
     // Reload the video source
     bgVideo.load();
     bgVideo.play();
 }
+
 
