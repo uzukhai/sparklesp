@@ -1,0 +1,208 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Honkai', sans-serif;
+    /*background: linear-gradient(135deg, #1e1f29, #2e2f3a);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 50%;
+  height: 50%;
+  z-index: -1; /* behind everything */
+  object-fit: cover; /* fill the screen like a background image */
+}
+
+.title h1 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 5rem;
+    
+}
+.title #t1 {
+    background-image: linear-gradient(to right, #ff6f91, #ffc75f);
+    background-clip: text;
+    color: transparent;
+}/*
+.title #t2 {
+    /*color: #ff9671;*
+    background-image: linear-gradient(to right, #ff8888, #ffaaaa);
+    background-clip: text;
+    color: transparent;
+}
+.title #t3 {
+    /*color: #ffc75f;*
+    background-image: linear-gradient(to right, #ffaaaa, #ffc75f);
+    background-clip: text;
+    color: transparent;
+}*/
+.title #e {
+    margin: 0px 10px;
+    font-size: 40px;
+    animation: wave 2s linear infinite;
+    display: inline-block;
+    top: 15%;
+}
+@keyframes bloom {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+@keyframes wave {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;}
+
+.tab {
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s;
+}
+
+.tab:hover {
+    color: #fff;
+    
+}
+
+.tab.active {
+    color: #fff;
+}
+
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.countdown-container {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.countdown-container.active {
+    display: block;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    text-align: center;
+}
+
+.countdown span {
+    display: block;
+}
+
+.countdown .number {
+    font-size: 3.0rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 20px 10px 0px 10px;
+}
+
+.label {
+    display: block;
+    font-size: 1.0rem;
+    color: #ffffff;
+    margin-top: 6px;
+}
+
+.desc h1{
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+footer {
+    color: white;
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+    font-family: 'Honkai', sans-serif;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+footer #t {
+    background-image: linear-gradient(to right, #ff6f91, #ecdd70);
+    background-clip: text;
+    color: transparent;
+    font-style: oblique;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+  /* Responsive */
+@media (max-width: 480px) {
+    .tabs { gap: 10px; }
+    .tab { padding-left: 20px; padding-right: 20px;}
+    .countdown .number { font-size: 2.0rem;padding: 20px 0px 0px 0px; }
+    .desc h1 { font-size: 1.3rem;}
+    body { background-position: 50% 0%}
+    
+}
+
+@font-face {
+    font-family: 'Honkai';
+    src: url('font/DIN.ttf') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}

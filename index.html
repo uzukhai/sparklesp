@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanami Countdown</title>
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css?v=2">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="image/background.mp4" type="video/mp4">
+    </video>
+    <div class="title">
+        <h1><span id="e">🌸</span><span id="t1">Hana<span id="l1">mi</span></span><span id="e">🌸</span></h1>
+    </div>
+    <div class="tabs">
+        <div class="tab active" onclick="showCountdown('live')">RELEASE</div>
+        <div class="tab">|</div>
+        <div class="tab" onclick="showCountdown('drip')">DRIP</div>
+    </div>
+    
+    <!-- Countdown 1 -->
+    <div id="live" class="countdown-container active">
+        <div class="countdown" id="cd1">
+            <div><span class="number" id="days1">00</span><span class="label">Days</span></div>
+            <div><span class="number" id="days1">:</div>
+            <div><span class="number" id="hours1">00</span><span class="label">Hours</span></div>
+            <div><span class="number" id="days1">:</div>
+            <div><span class="number" id="minutes1">00</span><span class="label">Minutes</span></div>
+            <div><span class="number" id="days1">:</div>
+            <div><span class="number" id="seconds1">00</span><span class="label">Seconds</span></div>
+        </div>
+        <div class="desc">
+            <h1>Jan 28 2026</h1>
+        </div>
+    </div>
+
+    <!-- Countdown 2 -->
+    <div id="drip" class="countdown-container">
+        <div class="countdown" id="cd2">
+        <div><span class="number" id="days2">00</span><span class="label">Days</span></div>
+        <div><span class="number" id="days1">:</div>
+        <div><span class="number" id="hours2">00</span><span class="label">Hours</span></div>
+        <div><span class="number" id="days1">:</div>
+        <div><span class="number" id="minutes2">00</span><span class="label">Minutes</span></div>
+        <div><span class="number" id="days1">:</div>
+        <div><span class="number" id="seconds2">00</span><span class="label">Seconds</span></div>
+        </div>
+        <div class="desc">
+            <h1>Dec 2 2025</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>Made by <span id="t">Uzukhai</span></a></p>
+</footer>
+</html>
